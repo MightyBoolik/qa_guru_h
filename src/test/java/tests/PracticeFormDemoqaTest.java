@@ -1,5 +1,8 @@
+package tests;
+
 import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import java.io.File;
@@ -10,12 +13,14 @@ import static com.codeborne.selenide.Selectors.*;
 import static com.codeborne.selenide.Selenide.*;
 
 public class PracticeFormDemoqaTest {
+    @Disabled
     @BeforeAll
-    static void setup(){
+    static void setup() {
         Configuration.startMaximized = true;
     }
+
     @Test
-    void toolsQaTest() {
+    public void toolsQaTest() {
         open("https://demoqa.com/automation-practice-form");
         $(".main-header").shouldHave(text("Practice Form"));
         $("#firstName").setValue("Vasiliy");
@@ -49,32 +54,6 @@ public class PracticeFormDemoqaTest {
                 text("Picture noname.png"),
                 text("Address Azeroth"),
                 text("State and City Rajasthan Jaipur"));
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     }

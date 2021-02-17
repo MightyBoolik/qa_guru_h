@@ -1,5 +1,5 @@
 plugins {
-    id 'java-library'
+    id "java-library"
 }
 
 repositories {
@@ -15,4 +15,8 @@ dependencies {
 
 test {
     useJUnitPlatform()
+    reports {
+        junitXml.enabled = false
+        html.enabled = true
+    }
 }
